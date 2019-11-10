@@ -5,7 +5,8 @@
 - ndcg评估
 - 特征重要度
 - 样本的叶结点输出
-(要求pip install lightgbm)
+
+(开始之前需要安装lightgbm，利用pip install lightgbm)
 
 ## 一.data format (raw data -> (feats.txt, group.txt))
 
