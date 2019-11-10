@@ -79,8 +79,8 @@
 - consume time : 4 seconds
 - training's ndcg@10: 0.940891
 
-##### 1.model.mod(model format)
-模型训练时的输出：
+##### 1.model.mod(model的格式在data/model/mode.mod)
+训练时的输出：
 - [LightGBM] [Info] Total Bins 9171
 - [LightGBM] [Info] Number of data: 7796, number of used features: 40
 - [LightGBM] [Debug] Trained a tree with leaves = 31 and max_depth = 9
