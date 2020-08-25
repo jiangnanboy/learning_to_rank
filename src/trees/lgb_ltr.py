@@ -8,6 +8,7 @@ import sys
 from sklearn.preprocessing import OneHotEncoder
 from data_format_read import read_dataset
 from ndcg import validate
+import matplotlib.pyplot as plt
 
 def split_data_from_keyword(data_read, data_group, data_feats):
     '''
@@ -129,6 +130,22 @@ def train(x_train, y_train, q_train, model_save_path):
     gbm = lgb.train(params, train_data, valid_sets=[train_data])
     gbm.save_model(model_save_path)
 
+def plot(model_path, tree_index):
+    '''
+    对模型进行可视化
+    :param model_path:
+    :return:
+    '''
+    if not os.path.exists(model_path):
+        print("file no exists! {}".format(model_path))
+        sys.exit(0)
+    gbm = lgb.Booster(model_file=model_path)
+    lgb.plot_tree(gbm, tree_index=tree_index, figsize=(20, 8), show_info=['split_gain'])
+    plt.show()
+
+    #graph = lgb.create_tree_digraph(gbm, tree_index=tree_index, name='tree' + str(tree_index))
+    #graph.render(filename=save_plot_path, view=True)
+
 def predict(x_test, comments, model_input_path):
     '''
     预测得分并排序
@@ -215,7 +232,7 @@ def get_leaf_index(data, model_path):
 if __name__ == '__main__':
 
     if len(sys.argv) != 2:
-        print("Usage: python main.py [-process | -train | -predict | -ndcg | -feature | -leaf]")
+        print("Usage: python lgb_ltr.py [-process | -train | |-plot | -predict | -ndcg | -feature | -leaf]")
         sys.exit(0)
 
     base_path = os.path.abspath(os.path.join(os.getcwd(), "../.."))
@@ -226,6 +243,7 @@ if __name__ == '__main__':
     data_group = train_path + 'group.txt'
 
     model_path = base_path + '/data/model/model.mod'
+    #save_plot_path = base_path + '/data/plot/tree.jpg'
 
     if sys.argv[1] == '-process':
         # 训练样本的格式与ranklib中的训练样本是一样的,但是这里需要处理成lightgbm中排序所需的格式
@@ -264,6 +282,10 @@ if __name__ == '__main__':
         train_end = datetime.now()
         consume_time = (train_end - train_start).seconds
         print("consume time : {}".format(consume_time))
+
+    elif sys.argv[1] == '-plot':
+        #可视化树模型
+        plot(model_path, 2)
 
     elif sys.argv[1] == '-predict':
         train_start = datetime.now()
