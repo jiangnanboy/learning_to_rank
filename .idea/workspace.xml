@@ -19,13 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="增加模型可视化">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/plot/tree_plot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/plot/tree_plot.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
+    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="模型决策可视化生成">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trees/lgb_ltr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trees/lgb_ltr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +37,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -75,7 +72,7 @@
       <workItem from="1598445194775" duration="12000" />
       <workItem from="1598445232943" duration="361000" />
       <workItem from="1598445612808" duration="1537000" />
-      <workItem from="1598450616060" duration="1466000" />
+      <workItem from="1598450616060" duration="2039000" />
     </task>
     <task id="LOCAL-00001" summary="增加模型可视化">
       <created>1598370318750</created>
@@ -84,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598370318750</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="模型决策可视化生成">
+      <created>1598452148942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598452148942</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,20 +108,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加模型可视化" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加模型可视化" />
+    <MESSAGE value="模型决策可视化生成" />
+    <option name="LAST_COMMIT_MESSAGE" value="模型决策可视化生成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="682" y="292" key="#Notifications" timestamp="1598445472959">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="682" y="292" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1598445472959" />
-    <state x="252" y="86" key="SettingsEditor" timestamp="1598445650626">
+    <state x="252" y="86" key="SettingsEditor" timestamp="1598452205787">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="252" y="86" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1598445650626" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598452067263">
+    <state x="252" y="86" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1598452205787" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598452282237">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598452067263" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598452282237" />
   </component>
 </project>

@@ -98,7 +98,7 @@
 - [LightGBM] [Debug] Trained a tree with leaves = 31 and max_depth = 11
 - [200]	training's ndcg@10: 0.940891
 - consume time : 4 seconds
-## 三.模型决策的可视化生成
+## 三.模型决策的可视化生成，可指定tree index可视化决策树
 ###### python lgb_ltr.py -plot
 
 ![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
