@@ -1,12 +1,13 @@
 # 利用lightgbm做learning to rank 排序，主要包括：
 - 数据格式处理
 - 模型训练
+- 可视化树模型
 - 预测
 - ndcg评估
 - 特征重要度
 - 样本的叶结点输出
 
-(要求pip install lightgbm)
+(要求pip install lightgbm，可视化要求安装graphviz)
 
 ## 一.data format (raw data -> (feats.txt, group.txt))
 
@@ -97,8 +98,12 @@
 - [LightGBM] [Debug] Trained a tree with leaves = 31 and max_depth = 11
 - [200]	training's ndcg@10: 0.940891
 - consume time : 4 seconds
+## 三.模型决策的可视化生成
+###### python lgb_ltr.py -plot
 
-## 三.predict 数据格式如feats.txt，当然可以在每行后面加一个标识(如文档编号，商品编码等)作为排序的输出,这里我直接从test.txt中得到feats与comment作为predict
+![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
+
+## 四.predict 数据格式如feats.txt，当然可以在每行后面加一个标识(如文档编号，商品编码等)作为排序的输出,这里我直接从test.txt中得到feats与comment作为predict
 
 ###### python lgb_ltr.py -predict
 
@@ -111,13 +116,13 @@
 -  'docid = GX065-08-0661325 inc = 0.012907717401617 prob = 0.0312699'
 -  'docid = GX012-13-5603768 inc = 1 prob = 0.0961297']
 
-## 四.validate ndcg 数据来自test.txt(data from test.txt)
+## 五.validate ndcg 数据来自test.txt(data from test.txt)
 
 ###### python lgb_ltr.py -ndcg
 
 all qids average ndcg:  0.761044123343
 
-## 五.features 打印特征重要度(features importance)
+## 六.features 打印特征重要度(features importance)
 
 ###### python lgb_ltr.py -feature
 
@@ -143,7 +148,7 @@ all qids average ndcg:  0.761044123343
 -  feat44name : 283 : 0.04716666666666667
 -  feat45name : 220 : 0.03666666666666667
 
-## 六.利用模型得到样本叶结点的one-hot表示，可以用于像gbdt+lr这种模型的训练
+## 七.利用模型得到样本叶结点的one-hot表示，可以用于像gbdt+lr这种模型的训练
 
 ###### python lgb_ltr.py -leaf
 
@@ -157,7 +162,7 @@ all qids average ndcg:  0.761044123343
 -  [ 0.  0.  0. ...,  1.  0.  0.]
 ]
 
-## 七.REFERENCES
+## 八.REFERENCES
 
 https://github.com/microsoft/LightGBM
 

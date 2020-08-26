@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="增加模型可视化">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/plot/tree_plot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/plot/tree_plot.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trees/lgb_ltr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trees/lgb_ltr.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gatfF2HDnMRbANhPAXD2zrx7Gm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="learning_to_rank" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="learning_to_rank" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\pycharm_workspace\learning_to_rank\src\trees" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="" />
+      <created>1598364631292</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598364631292</updated>
+      <workItem from="1598364635256" duration="2900000" />
+      <workItem from="1598367965593" duration="2047000" />
+      <workItem from="1598445194775" duration="12000" />
+      <workItem from="1598445232943" duration="361000" />
+      <workItem from="1598445612808" duration="1537000" />
+      <workItem from="1598450616060" duration="1466000" />
+    </task>
+    <task id="LOCAL-00001" summary="增加模型可视化">
+      <created>1598370318750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598370318750</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加模型可视化" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加模型可视化" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="682" y="292" key="#Notifications" timestamp="1598445472959">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="682" y="292" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1598445472959" />
+    <state x="252" y="86" key="SettingsEditor" timestamp="1598445650626">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="252" y="86" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1598445650626" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598452067263">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598452067263" />
+  </component>
+</project>
