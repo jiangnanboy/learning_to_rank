@@ -101,7 +101,7 @@
 ## 三.模型决策的可视化生成，可指定tree index可视化决策树
 ###### python lgb_ltr.py -plot
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
+![image](https://graw.githubusercontent.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
 
 ## 四.predict 数据格式如feats.txt，当然可以在每行后面加一个标识(如文档编号，商品编码等)作为排序的输出,这里我直接从test.txt中得到feats与comment作为predict
 
