@@ -8,6 +8,7 @@ import sys
 from sklearn.preprocessing import OneHotEncoder
 from data_format_read import read_dataset
 from ndcg import validate
+import shap
 import matplotlib.pyplot as plt
 import graphviz
 
@@ -73,8 +74,13 @@ def save_data(group_data, output_feature, output_group):
 
 def process_data_format(test_path, test_feats, test_group):
     '''
-     转为lightgbm需要的格式进行保存
-     '''
+    转为lightgbm需要的格式进行保存
+    :param test_path:
+    :param test_feats:
+    :param test_group:
+    :return:
+    '''
+
     with open(test_path, 'r', encoding='utf-8') as f_read:
         with open(test_feats, 'w', encoding='utf-8') as output_feature:
             with open(test_group, 'w', encoding='utf-8') as output_group:
@@ -95,12 +101,23 @@ def load_data(feats, group):
     '''
     加载数据
     分别加载feature,label,query
+    :param feats:
+    :param group:
+    :return:
     '''
+
     x_train, y_train = ds.load_svmlight_file(feats)
     q_train = np.loadtxt(group)
+
     return x_train, y_train, q_train
 
 def load_data_from_raw(raw_data):
+    '''
+    加载原始数据
+    :param raw_data:
+    :return:
+    '''
+
     with open(raw_data, 'r', encoding='utf-8') as testfile:
         test_X, test_y, test_qids, comments = read_dataset(testfile)
     return test_X, test_y, test_qids, comments
@@ -108,7 +125,13 @@ def load_data_from_raw(raw_data):
 def train(x_train, y_train, q_train, model_save_path):
     '''
     模型的训练和保存
+    :param x_train:
+    :param y_train:
+    :param q_train:
+    :param model_save_path:
+    :return:
     '''
+
     train_data = lgb.Dataset(x_train, label=y_train, group=q_train)
     params = {
         'task': 'train',  # 执行的任务类型
@@ -131,7 +154,7 @@ def train(x_train, y_train, q_train, model_save_path):
     gbm = lgb.train(params, train_data, valid_sets=[train_data])
     gbm.save_model(model_save_path)
 
-def plot(model_path, tree_index, save_plot_path):
+def plot_tree(model_path, tree_index, save_plot_path):
     '''
     对模型进行可视化
     :param model_path:
@@ -146,8 +169,13 @@ def plot(model_path, tree_index, save_plot_path):
 
 def predict(x_test, comments, model_input_path):
     '''
-    预测得分并排序
+     预测得分并排序
+    :param x_test:
+    :param comments:
+    :param model_input_path:
+    :return:
     '''
+
     gbm = lgb.Booster(model_file=model_input_path)  # 加载model
 
     ypred = gbm.predict(x_test)
@@ -161,7 +189,11 @@ def predict(x_test, comments, model_input_path):
 def test_data_ndcg(model_path, test_path):
     '''
     评估测试数据的ndcg
+    :param model_path:
+    :param test_path:
+    :return:
     '''
+
     with open(test_path, 'r', encoding='utf-8') as testfile:
         test_X, test_y, test_qids, comments = read_dataset(testfile)
 
@@ -173,10 +205,55 @@ def test_data_ndcg(model_path, test_path):
     print("all qid average ndcg: ", average_ndcg)
     print("job done!")
 
+def plot_print_feature_shap(model_path, data_feats, type):
+    '''
+    利用shap打印特征重要度
+    :param model_path:
+    :return:
+    '''
+
+    if not (os.path.exists(model_path) and os.path.exists(data_feats)):
+        print("file no exists! {}, {}".format(model_path, data_feats))
+        sys.exit(0)
+    gbm = lgb.Booster(model_file=model_path)
+    gbm.params["objective"] = "regression"
+    #feature列名
+    feats_col_name = []
+    for feat_index in range(46):
+        feats_col_name.append('feat' + str(feat_index) + 'name')
+    X_train, _ = ds.load_svmlight_file(data_feats)
+    #features
+    feature_mat = X_train.todense()
+    df_feature = pd.DataFrame(feature_mat)
+    #增加表头
+    df_feature.columns = feats_col_name
+    explainer = shap.TreeExplainer(gbm)
+    shap_values = explainer.shap_values(df_feature[feats_col_name])
+
+    #特征总体分析，分别绘出散点图和条状图
+    if type == 1:
+        #把一个特征对目标变量影响程度的绝对值的均值作为这个特征的重要性(不同于feature_importance的计算方式)
+        shap.summary_plot(shap_values, df_feature[feats_col_name], plot_type="bar")
+        # 对特征总体分析
+        shap.summary_plot(shap_values, df_feature[feats_col_name])
+    #部分依赖图的功能，与传统的部分依赖图不同的是，这里纵坐标不是目标变量y的数值而是SHAP值
+    if type == 2:
+        shap.dependence_plot('feat3name', shap_values, df_feature[feats_col_name], interaction_index=None, show=True)
+    # 两个变量交互下变量对目标值的影响
+    if type == 3:
+        shap.dependence_plot('feat3name', shap_values, df_feature[feats_col_name], interaction_index='feat5name', show=True)
+    #多个变量的交互进行分析
+    if type == 4:
+        shap_interaction_values = explainer.shap_interaction_values(df_feature[feats_col_name])
+        shap.summary_plot(shap_interaction_values, df_feature[feats_col_name], max_display=4, show=True)
+
 def plot_print_feature_importance(model_path):
     '''
     打印特征的重要度
+    :param model_path:
+    :return:
     '''
+
     #模型中的特征是Column_数字,这里打印重要度时可以映射到真实的特征名
     # feats_dict = {
     #     'Column_0': '特征0名称',
@@ -218,7 +295,11 @@ def plot_print_feature_importance(model_path):
 def get_leaf_index(data, model_path):
     '''
     得到叶结点并进行one-hot编码
+    :param data:
+    :param model_path:
+    :return:
     '''
+
     gbm = lgb.Booster(model_file=model_path)
     ypred = gbm.predict(data, pred_leaf=True)
 
@@ -230,7 +311,7 @@ def get_leaf_index(data, model_path):
 if __name__ == '__main__':
 
     if len(sys.argv) != 2:
-        print("Usage: python lgb_ltr.py [-process | -train | |-plot | -predict | -ndcg | -feature | -leaf]")
+        print("Usage: python lgb_ltr.py [-process | -train | |-plot | -predict | -ndcg | -feature | -shap | -leaf]")
         sys.exit(0)
 
     base_path = os.path.abspath(os.path.join(os.getcwd(), "../.."))
@@ -281,9 +362,9 @@ if __name__ == '__main__':
         consume_time = (train_end - train_start).seconds
         print("consume time : {}".format(consume_time))
 
-    elif sys.argv[1] == '-plot':
+    elif sys.argv[1] == '-plottree':
         #可视化树模型
-        plot(model_path, 2, save_plot_path)
+        plot_tree(model_path, 2, save_plot_path)
 
     elif sys.argv[1] == '-predict':
         train_start = datetime.now()
@@ -302,6 +383,9 @@ if __name__ == '__main__':
 
     elif sys.argv[1] == '-feature':
         plot_print_feature_importance(model_path)
+
+    elif sys.argv[1] == '-shap':
+        plot_print_feature_shap(model_path, data_feats, 3)
 
     elif  sys.argv[1] == '-leaf':
         #利用模型得到样本叶结点的one-hot表示

@@ -5,9 +5,10 @@
 - 预测
 - ndcg评估
 - 特征重要度
+- SHAP解析模型
 - 样本的叶结点输出
 
-(要求pip install lightgbm，可视化要求安装graphviz)
+(要求安装lightgbm、graphviz、shap等)
 
 ## 一.data format (raw data -> (feats.txt, group.txt))
 
@@ -98,8 +99,9 @@
 - [LightGBM] [Debug] Trained a tree with leaves = 31 and max_depth = 11
 - [200]	training's ndcg@10: 0.940891
 - consume time : 4 seconds
-## 三.模型决策的可视化生成，可指定tree index可视化决策树
-###### python lgb_ltr.py -plot
+## 三.模型决策的可视化生成
+可指定树的索引进行可视化生成，便于分析决策过程。
+###### python lgb_ltr.py -plottree
 
 ![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
 
@@ -148,7 +150,27 @@ all qids average ndcg:  0.761044123343
 -  feat44name : 283 : 0.04716666666666667
 -  feat45name : 220 : 0.03666666666666667
 
-## 七.利用模型得到样本叶结点的one-hot表示，可以用于像gbdt+lr这种模型的训练
+## 七.利用SHAP值解析模型中特征重要度
+
+###### python lgb_ltr.py -shap
+这里不同于六中特征重要度的计算，而是利用博弈论的方法--SHAP（SHapley Additive exPlanations）来解析模型。
+利用SHAP可以进行特征总体分析、多维特征交叉分析以及单特征分析等。
+
+##### 1.总体分析
+
+![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/all_feature_importance_1.png)
+
+![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/all_feature_importance_2.png)
+
+##### 2.多维特征交叉分析
+
+![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/multi-dimension_feature_importance.png)
+
+##### 3.单特征分析
+
+![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/single_feature_importance.png)
+
+## 八.利用模型得到样本叶结点的one-hot表示，可以用于像gbdt+lr这种模型的训练
 
 ###### python lgb_ltr.py -leaf
 
@@ -162,7 +184,7 @@ all qids average ndcg:  0.761044123343
 -  [ 0.  0.  0. ...,  1.  0.  0.]
 ]
 
-## 八.REFERENCES
+## 九.REFERENCES
 
 https://github.com/microsoft/LightGBM
 

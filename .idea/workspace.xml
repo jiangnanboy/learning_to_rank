@@ -19,14 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="模型决策可视化生成">
+    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="修改readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trees/lgb_ltr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trees/lgb_ltr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,6 +65,35 @@
       <recent name="D:\project\pycharm_workspace\learning_to_rank\src\trees" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="learning_to_rank" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/utils/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -72,7 +109,10 @@
       <workItem from="1598445194775" duration="12000" />
       <workItem from="1598445232943" duration="361000" />
       <workItem from="1598445612808" duration="1537000" />
-      <workItem from="1598450616060" duration="2039000" />
+      <workItem from="1598450616060" duration="3254000" />
+      <workItem from="1598455051466" duration="668000" />
+      <workItem from="1598455823063" duration="62000" />
+      <workItem from="1598526112568" duration="12520000" />
     </task>
     <task id="LOCAL-00001" summary="增加模型可视化">
       <created>1598370318750</created>
@@ -88,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598452148942</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改readme">
+      <created>1598452707123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598452707123</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,20 +156,40 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加模型可视化" />
     <MESSAGE value="模型决策可视化生成" />
-    <option name="LAST_COMMIT_MESSAGE" value="模型决策可视化生成" />
+    <MESSAGE value="修改readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="682" y="292" key="#Notifications" timestamp="1598445472959">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="682" y="292" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1598445472959" />
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1598530353050">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1598530353050">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1598530353050">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1598530353050">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
     <state x="252" y="86" key="SettingsEditor" timestamp="1598452205787">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="252" y="86" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1598452205787" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598452282237">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598452708915">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598452282237" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598452708915" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/learning_to_rank$test.coverage" NAME="test Coverage Results" MODIFIED="1598530348044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/utils" />
   </component>
 </project>
