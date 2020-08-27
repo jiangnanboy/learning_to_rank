@@ -189,3 +189,5 @@ all qids average ndcg:  0.761044123343
 https://github.com/microsoft/LightGBM
 
 https://github.com/jma127/pyltr
+
+https://github.com/slundberg/shap
