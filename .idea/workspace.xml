@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="增加对模型特征的分析">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="5199a1da-2553-4cbe-b968-160072002896" name="Default Changelist" comment="修改readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trees/lgb_ltr.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trees/lgb_ltr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,8 @@
       <workItem from="1598450616060" duration="3254000" />
       <workItem from="1598455051466" duration="668000" />
       <workItem from="1598455823063" duration="62000" />
-      <workItem from="1598526112568" duration="12840000" />
+      <workItem from="1598526112568" duration="13182000" />
+      <workItem from="1598613394655" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="增加模型可视化">
       <created>1598370318750</created>
@@ -140,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598539194342</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改readme">
+      <created>1598539470076</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1598539470076</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,39 +170,39 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加模型可视化" />
     <MESSAGE value="模型决策可视化生成" />
-    <MESSAGE value="修改readme" />
     <MESSAGE value="增加对模型特征的分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加对模型特征的分析" />
+    <MESSAGE value="修改readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="682" y="292" key="#Notifications" timestamp="1598445472959">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="682" y="292" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1598445472959" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1598530353050">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1598539614097">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1598530353050">
+    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1598539614097" />
+    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1598539614097">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1598530353050">
+    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1598539614097" />
+    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1598539614097">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1598530353050">
+    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1598539614097" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1598539614097">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1598530353050" />
+    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1598539614097" />
     <state x="252" y="86" key="SettingsEditor" timestamp="1598452205787">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="252" y="86" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1598452205787" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598539212634">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1598539505942">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598539212634" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1598539505942" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/learning_to_rank$test.coverage" NAME="test Coverage Results" MODIFIED="1598530348044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/utils" />

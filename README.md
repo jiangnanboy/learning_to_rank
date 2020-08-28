@@ -1,7 +1,7 @@
 # 利用lightgbm做learning to rank 排序，主要包括：
-- 数据格式处理
+- 数据预处理
 - 模型训练
-- 可视化树模型
+- 模型可视化
 - 预测
 - ndcg评估
 - 特征重要度
@@ -99,7 +99,7 @@
 - [LightGBM] [Debug] Trained a tree with leaves = 31 and max_depth = 11
 - [200]	training's ndcg@10: 0.940891
 - consume time : 4 seconds
-## 三.模型决策的可视化生成
+## 三.模型决策过程的可视化生成
 可指定树的索引进行可视化生成，便于分析决策过程。
 ###### python lgb_ltr.py -plottree
 

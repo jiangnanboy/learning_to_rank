@@ -17,7 +17,8 @@ def split_data_from_keyword(data_read, data_group, data_feats):
     利用pandas
     转为lightgbm需要的格式进行保存
     :param data_read:
-    :param data_save:
+    :param data_group:
+    :param data_feats:
     :return:
     '''
     with open(data_group, 'w', encoding='utf-8') as group_path:
@@ -158,6 +159,8 @@ def plot_tree(model_path, tree_index, save_plot_path):
     '''
     对模型进行可视化
     :param model_path:
+    :param tree_index:
+    :param save_plot_path:
     :return:
     '''
     if not os.path.exists(model_path):
@@ -209,6 +212,8 @@ def plot_print_feature_shap(model_path, data_feats, type):
     '''
     利用shap打印特征重要度
     :param model_path:
+    :param data_feats:
+    :param type:
     :return:
     '''
 
