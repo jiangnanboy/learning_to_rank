@@ -1,11 +1,11 @@
 # 利用lightgbm做learning to rank 排序，主要包括：
 - 数据预处理
 - 模型训练
-- 模型可视化
+- 模型决策可视化
 - 预测
 - ndcg评估
 - 特征重要度
-- SHAP解析模型
+- SHAP特征贡献度解释
 - 样本的叶结点输出
 
 (要求安装lightgbm、graphviz、shap等)
