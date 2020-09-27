@@ -103,7 +103,7 @@
 可指定树的索引进行可视化生成，便于分析决策过程。
 ###### python lgb_ltr.py -plottree
 
-![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/tree_plot.pdf)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/tree_plot.png)
 
 ## 四.predict 数据格式如feats.txt，当然可以在每行后面加一个标识(如文档编号，商品编码等)作为排序的输出,这里我直接从test.txt中得到feats与comment作为predict
 
