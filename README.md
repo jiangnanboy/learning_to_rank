@@ -103,7 +103,7 @@
 可指定树的索引进行可视化生成，便于分析决策过程。
 ###### python lgb_ltr.py -plottree
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/tree_plot.pdf)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/tree_plot.pdf)
 
 ## 四.predict 数据格式如feats.txt，当然可以在每行后面加一个标识(如文档编号，商品编码等)作为排序的输出,这里我直接从test.txt中得到feats与comment作为predict
 
@@ -158,17 +158,17 @@ all qids average ndcg:  0.761044123343
 
 ##### 1.总体分析
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/all_feature_importance_1.png)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/all_feature_importance_1.png)
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/all_feature_importance_2.png)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/all_feature_importance_2.png)
 
 ##### 2.多维特征交叉分析
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/multi-dimension_feature_importance.png)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/multi-dimension_feature_importance.png)
 
 ##### 3.单特征分析
 
-![image](https://github.com/jiangnanboy/learning_to_rank/tree/master/data/plot/single_feature_importance.png)
+![image](https://raw.githubusercontent.com/jiangnanboy/learning_to_rank/master/data/plot/single_feature_importance.png)
 
 ## 八.利用模型得到样本叶结点的one-hot表示，可以用于像gbdt+lr这种模型的训练
 
