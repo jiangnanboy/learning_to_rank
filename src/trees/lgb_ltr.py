@@ -152,7 +152,7 @@ def train(x_train, y_train, q_train, model_save_path):
         'min_data_in_leaf': 30,  # 一个叶子节点上包含的最少样本数量
         'verbose': 2  # 显示训练时的信息
     }
-    gbm = lgb.train(params, train_data, valid_sets=[train_data])
+    gbm = lgb.train(params, train_data, valid_sets=[train_data]) # 这里valid_sets可同时加入train_data，val_data
     gbm.save_model(model_save_path)
 
 def plot_tree(model_path, tree_index, save_plot_path):
@@ -374,7 +374,7 @@ if __name__ == '__main__':
     elif sys.argv[1] == '-predict':
         train_start = datetime.now()
         predict_data_path = base_path + '/data/test/test.txt'#格式如ranklib中的数据格式
-        test_X, test_y, test_qids, comments = load_data_from_raw(raw_data_path)
+        test_X, test_y, test_qids, comments = load_data_from_raw(predict_data_path)
         t_results = predict(test_X, comments, model_path)
         print(t_results)
         train_end = datetime.now()
